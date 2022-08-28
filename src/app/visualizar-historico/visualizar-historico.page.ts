@@ -66,6 +66,8 @@ export class VisualizarHistoricoPage implements OnInit {
   listLaunchs(id){
     this.launchService.getLaunchsByIdPatient(id, this.token).subscribe(res => {
       this.launchs = res;
+      this.listaResultadosIntervencao = [];
+      this.listaResultadosComparativos = [];
 
       var k = 0;
       for (let l of this.launchs) {
