@@ -1,52 +1,21 @@
-<ion-header [translucent]="true">
-</ion-header>
+<ion-content class="ion-no-padding">
+  <div class="conteudo">
+    <div class="cabecalho">
+      <div class="titulo">
+        Diabetes<strong>Check</strong>
+      </div>
 
-<ion-content [fullscreen]="true">
-  <table> 
-    <tr style="height: 150px;">
-      <td>
-        <div class="titulo">DiabetesCheck</div>
-      </td>
-    </tr>
+      <div class="subtitulo">
+        An app for you <br>
+        to check your diabetes risk
+      </div>
+    </div>
 
-    <tr style="height: 90px;">
-      <td>
-        <div class="descricao"> An app for you <br>
-           to check your diabetes risk <br> 
-        </div>
-      </td>
-    </tr>
+    <img class="imagem-icone" src="../../assets/blood-test.png" />
 
-    <tr style="height: 110px;">
-      <td>
-        <div class="botaoIniciar">
-          <ion-button color="tertiary" size="large" [routerLink]="['/login']" routerDirection="forward">START</ion-button>
-        </div>
-      </td>
-    </tr>
-
-    <tr style="height: 150px;">
-      <td>
-        <div class="descricao2">
-          Welcome to the DiabetesCheck app! By entering the patient's data you will be able to check the
-          his risk of having diabetes. The data are: age, weight, triglycerides, evolutionary time,
-          abdominal circumference, income and education. Honestly answering all items is critical
-          to receive a correct result.
-        </div>
-      </td>
-    </tr>
-
-    <tr style="height: 190px;">
-      <td>
-      </td>
-    </tr>
-
-    <tr style="height: 0px;">
-      <td>
-        <div class="botaoInfo">
-          <ion-router-link (click)="maisInfo()" style="color: rgb(19, 10, 134);">More information  .</ion-router-link>
-        </div>
-      </td>
-    </tr>
-  </table>
+    <div class="botoes">
+      <ion-button shape="round" size="small" expand="block" [routerLink]="['/login']" routerDirection="forward">START</ion-button>
+      <ion-router-link (click)="maisInfo()">More information</ion-router-link>
+    </div>
+  </div>
 </ion-content>
