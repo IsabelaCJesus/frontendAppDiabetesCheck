@@ -1,31 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>Create account</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="ion-padding">
-  <ion-item>
-    <ion-label position="stacked">Name</ion-label>
+  <h1>
+    <ion-anchor class="arrow-back-anchor" color="primary" [routerLink]="['/inicio']">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-anchor>
+    Create account
+  </h1>
+  
+  <ion-item class="ion-no-padding">
+    <ion-label position="floating">Name</ion-label>
     <ion-input type="text" [(ngModel)]="user.name"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Coren</ion-label>
+  <ion-item class="ion-no-padding mt-5">
+    <ion-label position="floating">Coren</ion-label>
     <ion-input type="text" [(ngModel)]="user.coren"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Username</ion-label>
+  <ion-item class="ion-no-padding mt-5">
+    <ion-label position="floating">Username</ion-label>
     <ion-input type="text" [(ngModel)]="user.username"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Password</ion-label>
+  <ion-item class="ion-no-padding mt-5">
+    <ion-label position="floating">Password</ion-label>
     <ion-input type="password" [(ngModel)]="user.password"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Repeat the password</ion-label>
+  <ion-item class="ion-no-padding mt-5">
+    <ion-label position="floating">Repeat the password</ion-label>
     <ion-input type="password" [(ngModel)]="repeatPassword"></ion-input>
   </ion-item>
 
-  <ion-button type="button" color="success" (click)="addAccount()">Save</ion-button>
-  <ion-button type="button" color="danger" [routerLink]="['/login']">Cancel</ion-button>
+  <ion-button shape="round" type="button" class="create-button" expand="block" size="small" (click)="addAccount()">CREATE ACCOUNT</ion-button>
+
+  <div class="login">
+    <ion-label>Already have an account?</ion-label>
+    <ion-anchor color="primary" [routerLink]="['/login']">Login</ion-anchor>
+  </div>
 </ion-content>
