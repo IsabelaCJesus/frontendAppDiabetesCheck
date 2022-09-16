@@ -1,21 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="ion-padding">
-    <ion-item>
-      <ion-label position="stacked">Username</ion-label>
-      <ion-input type="text" [(ngModel)]="username"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
+  <h1>
+    <ion-anchor class="arrow-back-anchor" color="primary" [routerLink]="['/inicio']">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-anchor>
+    Login
+  </h1>
+  <ion-item class="ion-no-padding">
+    <ion-label position="floating">Username</ion-label>
+    <ion-input type="text" [(ngModel)]="username"></ion-input>
+  </ion-item>
+  <ion-item class="ion-no-padding ion-padding-top">
+    <ion-label position="floating" class="ion-no-margin">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <div class="ion-text-end ion-padding-top">
+    <ion-anchor class="link-esqueci-senha" color="light">I forgot my password
+    </ion-anchor>
+  </div>
 
-    <ion-button type="button" color="success" (click)="login()">Login</ion-button>
-    <ion-button type="button" color="primary" [routerLink]="['/criar-conta']">Create account</ion-button>
-    <ion-button type="button"  color="warning"  [routerLink]="['/recuperar-senha']">I forgot my password</ion-button>
-  
+  <ion-button shape="round" type="button" class="login-button" expand="block" size="small" (click)="login()">LOGIN
+  </ion-button>
+
+  <div class="create-account">
+    <ion-label>Don't have an account?</ion-label>
+    <ion-anchor color="primary">Create account</ion-anchor>
+  </div>
 </ion-content>

@@ -1,0 +1,71 @@
+ion-content,
+ion-item {
+    --background: white;
+    background-color: white;
+}
+
+ion-item {
+    ion-label {
+        color: #999;
+    }
+
+    &.item-interactive.ion-valid {
+        --highlight-background: #5a7eee;
+    }
+    
+    ion-input {
+        color: #555;
+    }
+
+    &.item-has-focus ion-label {
+        color: #5a7eee;
+    }
+}
+
+h1 {
+    color: #5a7eee;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+h1 ion-anchor {
+    height: 35px;
+    line-height: 1;
+}
+
+.link-esqueci-senha {
+    color: #999;
+    text-decoration: underline;
+}
+
+.login-button {
+    margin-top: 40px;
+    --background: #5a7eee;
+    color: white;
+    font-size: 1.32rem;
+    text-transform: uppercase;
+
+    &.ion-activated {
+        --background-activated: #4464c5;
+    }
+}
+
+.create-account {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+
+    ion-label {
+        color: #999;
+    }
+
+    ion-anchor {
+        color: #fd568c;
+        text-decoration: underline;
+    }
+}
