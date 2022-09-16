@@ -9,20 +9,19 @@
     <ion-label position="floating">Username</ion-label>
     <ion-input type="text" [(ngModel)]="username"></ion-input>
   </ion-item>
-  <ion-item class="ion-no-padding ion-padding-top">
-    <ion-label position="floating" class="ion-no-margin">Password</ion-label>
+  <ion-item id="item-password" class="ion-no-padding">
+    <ion-label position="floating">Password</ion-label>
     <ion-input type="password" [(ngModel)]="password"></ion-input>
   </ion-item>
   <div class="ion-text-end ion-padding-top">
-    <ion-anchor class="link-esqueci-senha" color="light">I forgot my password
+    <ion-anchor class="link-esqueci-senha" color="light" [routerLink]="['/recuperar-senha']">I forgot my password
     </ion-anchor>
   </div>
 
-  <ion-button shape="round" type="button" class="login-button" expand="block" size="small" (click)="login()">LOGIN
-  </ion-button>
+  <ion-button shape="round" type="button" class="login-button" expand="block" size="small" (click)="login()">LOGIN</ion-button>
 
   <div class="create-account">
     <ion-label>Don't have an account?</ion-label>
-    <ion-anchor color="primary">Create account</ion-anchor>
+    <ion-anchor color="primary" [routerLink]="['/criar-conta']">Create account</ion-anchor>
   </div>
 </ion-content>
