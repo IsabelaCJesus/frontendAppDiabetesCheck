@@ -76,6 +76,10 @@ const routes: Routes = [
     path: 'ativar-users',
     loadChildren: () => import('./ativar-users/ativar-users.module').then( m => m.AtivarUsersPageModule)
   },
+  {
+    path: 'historico',
+    loadChildren: () => import('./historico/historico.module').then( m => m.HistoricoPageModule)
+  },
 
 ];
 

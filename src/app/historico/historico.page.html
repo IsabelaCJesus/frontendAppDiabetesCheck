@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar color="primary">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list>
+    <div *ngIf="launch">
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.date">Date:  {{ launch.date }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.coren">Coren:  {{ launch.coren }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.age">Age:  {{ launch.age }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.height">Height:  {{ launch.height }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.weight">Weight:  {{ launch.weight }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.triglycerides">Triglycerides:  {{ launch.triglycerides }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.evolutionaryTime">Evolutionary time:  {{ launch.evolutionaryTime }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.abdominalCircumference">Abdominal circumference:  {{ launch.abdominalCircumference }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.income">Income:  {{ launch.income }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.schooling">Schooling:  {{ launch.schooling }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.interventionResult">Result intervention group:  {{ launch.interventionResult }}</h5>
+        </ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          <h5 value="this.launch.comparativeResult">Result comparative group:  {{ launch.comparativeResult }}</h5>
+        </ion-text>
+      </ion-item>
+    </div>
+    </ion-list>
+  <br>
+  <ion-button type="button" color="danger" [routerLink]="['/home/visualizar-historico']">Back</ion-button>
+</ion-content>

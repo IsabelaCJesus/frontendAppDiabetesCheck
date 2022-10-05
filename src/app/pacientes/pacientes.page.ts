@@ -125,6 +125,8 @@ export class PacientesPage implements OnInit {
     });
  
     await modal.present();
+    const { data, role } = await modal.onWillDismiss();
+    this.getPatients();
   }
 
   async logout() {

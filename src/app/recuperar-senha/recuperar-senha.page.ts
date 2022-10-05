@@ -37,7 +37,7 @@ export class RecuperarSenhaPage implements OnInit {
         this.userService.updatePassword(newPassword, res.id).subscribe();
         this.email.destiny = this.username;
         this.email.title = "Recuperação de senha";
-        this.email.body = "Para acessar ao sistema utilize seu username e a senha: "+ newPassword;
+        this.email.body = "Para acessar ao sistema utilize seu username e a senha: "+ newPassword +". Lembre-se de, assim que fizer login alterar sua senha, por questões de segurança.";
         this.emailService.send(this.email).subscribe( res=>{
           this.showAlert("An email has been sent with your new password!");
           this.router.navigateByUrl('/login', { replaceUrl: true });

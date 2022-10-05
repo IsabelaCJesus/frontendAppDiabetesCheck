@@ -9,6 +9,7 @@ import { Chart, LinearScale, BarController, CategoryScale, BarElement, DoughnutC
 import { Data, LaunchService } from '../services/launch.service';
 import { Patient, PatientService } from '../services/patient.service';
 import { Storage } from '@ionic/storage';
+import { HistoricoPage } from '../historico/historico.page';
 
 Chart.register( LinearScale, BarController, CategoryScale, BarElement, DoughnutController, ArcElement, LineController,
   PointElement, LineElement);
@@ -98,14 +99,15 @@ export class VisualizarHistoricoPage implements OnInit {
   }
 
   async openLaunch(launch: Data) {
-    const modal = await this.modalCtrl.create({
-      component: ModalLancamentoPage,
+    this.router.navigateByUrl(`/home/historico?r=${launch.id}`, { replaceUrl: true });
+    
+    /*const modal = await this.modalCtrl.create({
+      component: HistoricoPage,
       componentProps: { id: launch.id },
       breakpoints: [0, 0.5, 0.8],
       initialBreakpoint: 0.8
     });
- 
-    await modal.present();
+    await modal.present();*/
   }
 
   lineChartMethod() {
