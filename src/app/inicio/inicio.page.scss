@@ -1,39 +1,61 @@
-ion-content {
-    --background: url('../../assets/fundo.jpg') no-repeat center center / cover;
+.conteudo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #809efe, #5a7eee);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 0 20px;
+}
+
+* {
+  color: white;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 2.8rem;
+
+  strong {
+    color: #fd568c;
   }
-  
-  .botaoIniciar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.subtitulo {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: bold;
+}
+
+.imagem-icone {
+  display: block;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.botoes {
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+  ion-button {
+    --background: white;
+    color: #090b32;
+    font-size: 1.5rem;
+
+    &.ion-activated {
+      --background-activated: #EBEBEB;
+    }
   }
-  
-  .titulo{
-    text-align: center;
-    color: rgb(6, 5, 58);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 55px;
-    font-style: italic;
+
+  ion-router-link {
+    text-decoration: underline;
   }
-  
-  .descricao{
-    text-align: center;
-    color: rgb(9, 7, 22);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 27px;
-    font-style: bold;
-  }
-  
-  .descricao2{
-    text-align: justify;
-    padding: 20px;
-    color: rgb(13, 14, 12);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-  }
-  
-  .botaoInfo{
-     display: flex;
-     justify-content: right;
-     align-items: right;
-   }
+}

@@ -1,16 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>Forgot password</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item>
-      <ion-label position="stacked">Enter your email address registered in the system:*</ion-label>
-      <ion-input name="username" [(ngModel)]="username" type="text"> </ion-input>
-    </ion-item>
-  </ion-list>
+<ion-content class="ion-padding">
+  <h1>
+    <ion-anchor class="arrow-back-anchor" color="primary" [routerLink]="['/login']" routerDirection="forward">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-anchor>
+    Forgot password
+  </h1>
 
-  <ion-button type="submit" expand="block" color="success" (click)="updatePassword()">Change Password</ion-button>
-  <ion-button type="button" expand="block" color="danger"  [routerLink]="['/login']" routerDirection="forward"> Cancel </ion-button>
+  <ion-item class="ion-no-padding">
+    <ion-label position="floating">Email registered in the system:*</ion-label>
+    <ion-input name="username" [(ngModel)]="username" type="text"> </ion-input>
+  </ion-item>
+
+  <ion-button shape="round" type="button" class="change-button" expand="block" size="small" (click)="updatePassword()">Change Password</ion-button>
 </ion-content>
